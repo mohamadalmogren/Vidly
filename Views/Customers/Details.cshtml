@@ -9,10 +9,12 @@
 
 <ul>
     <li>Membership Type: @Model.MembershipType.Name</li>
-    @{            
+    @{
         if (Model.Birthdate.HasValue)
         {
             <li>@Model.Birthdate</li>
-            }
+        }
     }
 </ul>
+
+@Html.ActionLink("Back", "Index", "Movies", null, new { @class = "btn btn-warning" })
