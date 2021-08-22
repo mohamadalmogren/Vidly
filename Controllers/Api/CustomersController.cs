@@ -63,7 +63,7 @@ namespace Vidly.Controllers.Api
         public IHttpActionResult UdateCustomer(int id, CustomerDto  customerDto)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
 
             var customerInDb = _context.Customers.
                 SingleOrDefault(c => c.Id == id);
