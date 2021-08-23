@@ -17,6 +17,7 @@ namespace Vidly.Dtos
 
         [Required]
         public int GenresId { get; set; }
+        public GenresDto Genres { get; set; }
 
         public DateTime DateAdded { get; set; } = DateTime.Now;
 
